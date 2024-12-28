@@ -1,0 +1,15 @@
+artifact_uri: file:///E:/ML_Project/MLflow%20practice/mlruns/0/b71b741f914941c3892a50812186e78f/artifacts
+end_time: 1735373066503
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: b71b741f914941c3892a50812186e78f
+run_name: GBC
+run_uuid: b71b741f914941c3892a50812186e78f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1735373058509
+status: 3
+tags: []
+user_id: Lenovo

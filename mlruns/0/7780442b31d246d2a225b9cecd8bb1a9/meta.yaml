@@ -1,0 +1,15 @@
+artifact_uri: file:///E:/ML_Project/MLflow%20practice/mlruns/0/7780442b31d246d2a225b9cecd8bb1a9/artifacts
+end_time: 1735374077553
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 7780442b31d246d2a225b9cecd8bb1a9
+run_name: DTC
+run_uuid: 7780442b31d246d2a225b9cecd8bb1a9
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1735374069079
+status: 3
+tags: []
+user_id: Lenovo

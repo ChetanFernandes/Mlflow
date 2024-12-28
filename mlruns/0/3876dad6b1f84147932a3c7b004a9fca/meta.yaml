@@ -1,0 +1,16 @@
+artifact_uri: file:///E:/ML_Project/MLflow%20practice/mlruns/0/3876dad6b1f84147932a3c7b004a9fca/artifacts
+deleted_time: 1735372765326
+end_time: 1735372318401
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: 3876dad6b1f84147932a3c7b004a9fca
+run_name: RFC
+run_uuid: 3876dad6b1f84147932a3c7b004a9fca
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1735372311295
+status: 3
+tags: []
+user_id: Lenovo

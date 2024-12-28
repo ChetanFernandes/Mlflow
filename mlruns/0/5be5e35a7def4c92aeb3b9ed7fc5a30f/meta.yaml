@@ -1,0 +1,16 @@
+artifact_uri: file:///E:/ML_Project/MLflow%20practice/mlruns/0/5be5e35a7def4c92aeb3b9ed7fc5a30f/artifacts
+deleted_time: 1735372127397
+end_time: 1735371599012
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: 5be5e35a7def4c92aeb3b9ed7fc5a30f
+run_name: delicate-pig-48
+run_uuid: 5be5e35a7def4c92aeb3b9ed7fc5a30f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1735371584105
+status: 3
+tags: []
+user_id: Lenovo

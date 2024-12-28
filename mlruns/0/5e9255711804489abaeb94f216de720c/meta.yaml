@@ -1,0 +1,16 @@
+artifact_uri: file:///E:/ML_Project/MLflow%20practice/mlruns/0/5e9255711804489abaeb94f216de720c/artifacts
+deleted_time: 1735372127381
+end_time: 1735371628173
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: 5e9255711804489abaeb94f216de720c
+run_name: ambitious-auk-920
+run_uuid: 5e9255711804489abaeb94f216de720c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1735371618875
+status: 3
+tags: []
+user_id: Lenovo

@@ -1,0 +1,15 @@
+artifact_uri: file:///E:/ML_Project/MLflow%20practice/mlruns/0/e550a0c338ff4f02955d75a3b973baf2/artifacts
+end_time: 1735374084236
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: e550a0c338ff4f02955d75a3b973baf2
+run_name: GNB
+run_uuid: e550a0c338ff4f02955d75a3b973baf2
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1735374077588
+status: 3
+tags: []
+user_id: Lenovo
