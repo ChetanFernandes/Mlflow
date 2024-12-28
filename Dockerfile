@@ -10,7 +10,7 @@ RUN apt-get update && apt-get install -y git \
     rm -rf /var/lib/apt/lists/*
 
 # Clone the Git repository
-RUN git clone https://github.com/ChetanFernandes/Mlflow /app
+#RUN git clone https://github.com/ChetanFernandes/Mlflow /app
 
 # Set the working directory
 WORKDIR /app
@@ -35,5 +35,5 @@ COPY . .
 #EXPOSE 8000
 
 # Start the application
-CMD ["python3", "app.py"]
+CMD ["python3", "Mlflow.py"]
 
