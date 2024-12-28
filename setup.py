@@ -15,7 +15,7 @@ def get_requirements(file_path:str)->List[str]:
     
         return requirements
 setup(
-    name="Mlflow",
+    name="Phishing",
     version="0.0.1",
     author="Chetan",
     author_email="chetanfern@gmail.com",
