@@ -1,4 +1,5 @@
 
+import mlflow
 import mlflow.sklearn
 from sklearn.linear_model import LogisticRegressionCV
 from sklearn.svm import LinearSVC
@@ -13,7 +14,10 @@ import threading
 import subprocess
 import warnings
 warnings.filterwarnings('ignore')
+from urllib.parse import urlparse
+import os
 
+app = Flask(__name__)
 
 # Models dictionary
 models = {
@@ -26,25 +30,27 @@ models = {
     "GNB": GaussianNB()
 }
 
-# Initialize Flask app
-app = Flask(__name__)
-
-# Function to run MLflow UI in a separate thread
-def start_mlflow_ui():
-    subprocess.run(["mlflow", "ui"], check=True)
-
 @app.route("/")
 def route():
     # Enable MLflow autologging for scikit-learn models
-    mlflow.sklearn.autolog()
+    mlflow.sklearn.autolog() 
+
+    mlflow_tracking_uri = "https://dagshub.com/ChetanFernandes/Mlflow.mlflow"
+    mlflow_username = os.environ.get("MLFLOW_TRACKING_USERNAME", "default_username")
+    mlflow_password = os.environ.get("MLFLOW_TRACKING_PASSWORD", "default_password")
+
+
+    print(f"MLFlow URI: {mlflow_tracking_uri}")
+    print(f"MLFlow Username: {mlflow_username}")
+    print(f"MLFlow Password: {mlflow_password}")
+
+
+    mlflow.set_tracking_uri(mlflow_tracking_uri)
+    
 
     # Load dataset and split it
     data = load_iris()
     X_train, X_test, y_train, y_test = train_test_split(data.data, data.target, test_size=0.3, random_state=42)
-
-    # Start MLflow UI in a separate thread
-    ui_thread = threading.Thread(target=start_mlflow_ui)
-    ui_thread.start()
 
     # Iterate over models and train them
     for model_name, model in models.items():
@@ -58,12 +64,11 @@ def route():
 
             # Log the accuracy manually (autologging will track other details like parameters, etc.)
             mlflow.log_metric("accuracy", accuracy)
-
-            print(f"Model: {model_name}, Accuracy: {accuracy:.4f}")
+            mlflow.sklearn.log_model(model, "model")
     
     # Return response after training is completed
     return "Training completed, check the MLflow UI for details."
 
 if __name__ == "__main__":
-    # Start Flask app
+    # Start Flask app (Gunicorn will handle the actual deployment in production)
     app.run(host="0.0.0.0", port=8000, debug=True)
