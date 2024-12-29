@@ -61,10 +61,10 @@ def route():
             # Predict and calculate accuracy
             y_pred = model.predict(X_test)
             accuracy = accuracy_score(y_test, y_pred)
+            print(f"Model: {model_name}, Accuracy: {accuracy}")
 
             # Log the accuracy manually (autologging will track other details like parameters, etc.)
-            mlflow.log_metric("accuracy", accuracy)
-            mlflow.sklearn.log_model(model, "model")
+           
     
     # Return response after training is completed
     return "Training completed, check the MLflow UI for details."

@@ -9,11 +9,12 @@ RUN apt-get update && apt-get install -y git \
     python3-dev && \
     rm -rf /var/lib/apt/lists/*
 
+# Set the working directory
+WORKDIR /app
+
 # Clone the Git repository
 RUN git clone https://github.com/ChetanFernandes/Mlflow /app
 
-# Set the working directory
-WORKDIR /app
 
 # Copy dependencies first (for caching layers)
 COPY requirements.txt .
@@ -35,5 +36,5 @@ COPY . .
 #EXPOSE 8000
 
 # Start the application
-CMD ["gunicorn", "-w", "4", "--bind", "0.0.0.0:8000", "Mlflow:app"]
+CMD ["gunicorn", "-w", "4","--timeout", "240", "--bind", "0.0.0.0:8000", "Mlflow:app"]
 
